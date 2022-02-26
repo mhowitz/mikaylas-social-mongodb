@@ -1,12 +1,13 @@
 const { Thought, User } = require('../models');
 
 const ThoughtController = {
-    getThroughts(req, res) {
+    getThoughts(req, res) {
         Thought.find({})
-        .populate({
-            path: 'user',
-            select: '-__v'
-        }).select('-__v').then(dbUser => res.json(dbUser))
+        // .populate({
+        //     path: 'user',
+        //     select: '-__v'
+        // }).select('-__v')
+        .then(dbUser => res.json(dbUser))
         .catch(err=> {
             console.log(err);
             res.status(400).json(err);
@@ -17,7 +18,7 @@ const ThoughtController = {
         Thought.create(body)
         .then(({ _id }) => {
             return User.findOneAndUpdate(
-                { _id: params.userId },
+                { _id: params.userId},
                 { $push: { thoughts: _id }},
                 { new: true }
             )
