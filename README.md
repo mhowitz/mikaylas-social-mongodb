@@ -7,9 +7,10 @@
 
 Link to Repo: [GITHUB-REPO](https://github.com/mhowitz/mikaylas-social-mongodb)
 
-Link to Walkthrough Video: [VIDEO]https://youtu.be/2Jv0fT2KjgM
+Link to Walkthrough Video: [VIDEO](https://youtu.be/bZXed-0ZqJw)
 
 ## Description
+
 
 This Project was created using Node.js, Express, and Mongoose. It is a database that stores user data and allows them to create thoughts, add friends, and reply to thoughts.
 
